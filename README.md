@@ -18,12 +18,12 @@ $ go install bloodHound
 The config.cfg file is currently not read.
 
 The regexps.cfg has 4 sections, a new section is started with ";section section_name"
-and can appear anywhere in the file.
+and can appear anywhere in the file.  
 Each entry in a section can be grouped into a category. A new category is
-started with ";category category_name".
-Categories are used only for structuring the report. The default category is "none".
-Each line not preceded by a ";" is treated as a regular expression.
-Line beginng with "#" are treated as comments.
+started with ";category category_name".  
+Categories are used only for structuring the report. The default category is "none".  
+Each line not preceded by a ";" is treated as a regular expression.  
+Lines beginning with "#" are treated as comments.
 
 Entries under section "filename" will match filenames of files. It currently does not test directories.
 If a filename matches it will be reported without further testing the content.
@@ -31,10 +31,10 @@ If a filename matches it will be reported without further testing the content.
 Entries under section "content" will match the content of a file.
 Only files with size <= the max file size will be tested.
 
-Files with a name matching an entry under the section "ignore-content" 
+Files with a name matching an entry under the section "ignore-content"
 will be matched for filename but never checked for content.
 
-Files with a name matching an entry under the section "ignore-filename" 
+Files with a name matching an entry under the section "ignore-filename"
 will be ignored completely and never matched against any other category.
 
 
@@ -55,11 +55,11 @@ Usage: bloodHound.exe [OPTIONS] <path>
         Number of concurrent workers (default 8)
 ```
 
-The max file size can be
-B (bytes)
-K, KB (kilobytes)
-M, MB (megabytes)
-G, GB (gigabytes)
+The max file size can be  
+B (bytes)  
+K, KB (kilobytes)  
+M, MB (megabytes)  
+G, GB (gigabytes)  
 T, TB (terabyte)
 
 The wait delay is in seconds.
@@ -68,5 +68,5 @@ The wait delay is in seconds.
 
 
 ###TODO
-Read configuration from config file
-Include directories in filename check
+* Read configuration from config file
+* Include directories in filename check
